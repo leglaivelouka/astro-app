@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Astro App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,11 +20,20 @@
     </section>
 
     <section>
-      <h2>Radar météo</h2>
-      <div id="radar">À venir…</div>
-    </section>
+    <h2>Radar météo</h2>
+    <div id="radar"></div>
+    <div class="radar-controls">
+    <button id="radar-play">▶ Lecture</button>
+    <input id="radar-slider" type="range" min="0" max="0" value="0">
+    <span id="radar-time">Chargement…</span>
+    <button id="radar-loc">📍 Ma position</button>
+    </div>
+  <p class="credit">Weather data by <a href="https://www.rainviewer.com" target="_blank" rel="noopener">Rain Viewer</a></p>
+</section>
   </main>
 
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
