@@ -1,9 +1,8 @@
 // ----- Radar météo -----
 const map = L.map("radar").setView([46.6, 2.5], 5);
 
-L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
-  attribution: "© OpenStreetMap contributors © CARTO",
-  subdomains: "abcd",
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution: "© OpenStreetMap contributors",
   maxZoom: 12
 }).addTo(map);
 
