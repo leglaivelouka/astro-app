@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #0b1020;
+  color: #e8ecf8;
+}
+
+header {
+  padding: 1rem;
+  text-align: center;
+  background: #121a33;
+}
+
+main {
+  padding: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 1.5rem;
+}
+
+#sky, #radar {
+  height: 300px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #2a3560;
+  border-radius: 12px;
+  background: #0f1630;
+}
