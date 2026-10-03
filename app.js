@@ -83,3 +83,22 @@ locBtn.addEventListener("click", () => {
 
 loadRadar();
 setInterval(loadRadar, 5 * 60 * 1000); // actualisation toutes les 5 minutes
+
+// ----- Carte du ciel (VirtualSky) -----
+const skyFrame = document.getElementById("sky-frame");
+const skyLocBtn = document.getElementById("sky-loc");
+const skyPlace = document.getElementById("sky-place");
+
+skyLocBtn.addEventListener("click", () => {
+  if (!navigator.geolocation) return;
+  navigator.geolocation.getCurrentPosition(
+    pos => {
+      const url = new URL(skyFrame.src);
+      url.searchParams.set("latitude", pos.coords.latitude.toFixed(4));
+      url.searchParams.set("longitude", pos.coords.longitude.toFixed(4));
+      skyFrame.src = url.toString();
+      skyPlace.textContent = "Votre position";
+    },
+    () => alert("Position non disponible")
+  );
+});

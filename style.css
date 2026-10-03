@@ -22,12 +22,18 @@ section {
 }
 
 #sky {
-  height: 300px;
   display: grid;
   place-items: center;
+  padding: 0.5rem;
   border: 1px solid #2a3560;
   border-radius: 12px;
-  background: #0f1630;
+  background: #060a18;
+}
+
+#sky-canvas {
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 1 / 1;
 }
 
 #radar {
@@ -65,4 +71,11 @@ section {
 
 .credit a {
   color: #8fa8ff;
+}
+#sky-frame {
+  width: 100%;
+  height: 560px;
+  border: 1px solid #2a3560;
+  border-radius: 12px;
+  background: #000;
 }

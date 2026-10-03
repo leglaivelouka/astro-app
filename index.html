@@ -6,7 +6,7 @@
   <title>Astro App</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="style.css">
+  
 </head>
 <body>
   <header>
@@ -15,9 +15,17 @@
 
   <main>
     <section>
-      <h2>Carte du ciel</h2>
-      <div id="sky">À venir…</div>
-    </section>
+  <h2>Carte du ciel</h2>
+
+  <iframe id="sky-frame" title="Carte du ciel"
+    src="https://virtualsky.lco.global/embed/index.html?longitude=6.4384&latitude=48.2335&projection=stereo&constellations=true&constellationlabels=true&showstarlabels=true&showgalaxy=true&ecliptic=true&magnitude=6&live=true&az=229.6&lang=fr"></iframe>
+
+  <div class="radar-controls">
+    <button id="sky-loc">📍 Ma position</button>
+    <span id="sky-place">Lieu par défaut</span>
+  </div>
+  <p class="credit">Planétarium : <a href="https://virtualsky.lco.global/" target="_blank" rel="noopener">VirtualSky</a> (Las Cumbres Observatory)</p>
+</section>
 
     <section>
     <h2>Radar météo</h2>
@@ -34,6 +42,7 @@
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/astronomy-engine@2.1.19/astronomy.browser.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
